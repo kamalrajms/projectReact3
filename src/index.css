@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.box {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  border: 10px solid #000;
+  box-sizing: border-box;
+  background-color: aqua;
+}
+.day {
+  color: red;
+}
+.absent {
+  color: green;
+}
+.react {
+  background: #000;
+}
+
+.para {
+  color: red;
+  padding: 20px;
+  border: 10px solid black;
+}
