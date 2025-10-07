@@ -1,26 +1,17 @@
-import React, { useState } from "react";
-import Greeeting from "./component/Greeeting";
-import Greet from "./component/Greet";
-import UsestateHook from "./component/UsestateHook";
-import ConditionalRendering from "./component/ConditionalRendering";
-import ListRendering from "./component/ListRendering";
-import Dark from "./component/Dark";
+import React from "react";
+import UseStateInput from "./component/UseStateInput";
+import MultipleFieldInp from "./component/MultipleFieldInp";
+import RegistrationForm from "./component/RegistrationForm";
 
 export default function App() {
-  const name = "karthick";
-  const day = "friday";
-  const [user, setUser] = useState(false);
-
   return (
-    <>
-      <Dark />
-      {user ? <ListRendering /> : <ConditionalRendering />}
-      <button onClick={() => setUser(!user)}>user</button>
-      <UsestateHook />
-      <div>Hello </div>
-      <Greeeting name={name} day={day} />
-      <Greet day={day} name={name} />
-      <nav className="box">hello world</nav>
-    </>
+    <div>
+      <h1>React class</h1>
+      <UseStateInput />
+      <h1>multiple field</h1>
+      <MultipleFieldInp />
+      <h1>form</h1>
+      <RegistrationForm />
+    </div>
   );
 }
