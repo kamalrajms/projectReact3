@@ -65,4 +65,17 @@
 
         rendering multiple items dynamically useing .map() , reducer(), find()...
 
-        
+## useEffect()
+
+    in react, useEffect is a hook that lets you perform 
+    side useEffectin function component.
+    side effects are the taske happend outsides the normal react rendering process,
+
+        Fetching datas from API
+        updating the browser  Dom manually
+        starting/stoping timers
+
+    useEffect(()=>{
+        //code
+    },[dependency,developed 2,dependency 3])
+
