@@ -26,3 +26,16 @@
   padding: 20px;
   border: 10px solid black;
 }
+.container {
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  background-color: cadetblue;
+}
+.imgContainer {
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+}

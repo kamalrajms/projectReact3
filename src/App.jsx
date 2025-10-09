@@ -5,10 +5,14 @@ import RegistrationForm from "./component/RegistrationForm";
 import UseEffectHook from "./component/UseEffectHook";
 import UeseffectTimer from "./component/UeseffectTimer";
 import APIUseEffect from "./component/APIUseEffect";
+import UseEffectTimerstartstop from "./component/UseEffectTimerstartstop";
+import UseRefHook from "./component/UseRefHook";
 
 export default function App() {
   return (
     <div>
+      <UseRefHook />
+      <UseEffectTimerstartstop />
       <APIUseEffect />
       <UeseffectTimer />
       <UseEffectHook />
