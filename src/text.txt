@@ -87,3 +87,25 @@
     that values persist between rendering
 
     updating it does not causes your compoonent to re-render.
+
+## useContext()
+
+    passing data from a parent component down to deeply nested child component is annoying
+
+    normally , you'd have to pass props manually through each level (called props drilling)
+
+    useContext lets ou skip all the middle components and share daya directly
+
+
+            # create a context
+            # Provider  a value
+            # consume the value
+
+## useReducer()
+
+    const[state,dispatch]=useReducer(reducerFunction,initialValue)
+
+    state-- current variable (like usestate)
+    dispatch-- a function to tell the reducer what to do
+    reducerFunction-- the logic that returns a new state
+    initialValue-- starting value

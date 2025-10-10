@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, createContext } from "react";
 import UseStateInput from "./component/UseStateInput";
 import MultipleFieldInp from "./component/MultipleFieldInp";
 import RegistrationForm from "./component/RegistrationForm";
@@ -7,10 +7,23 @@ import UeseffectTimer from "./component/UeseffectTimer";
 import APIUseEffect from "./component/APIUseEffect";
 import UseEffectTimerstartstop from "./component/UseEffectTimerstartstop";
 import UseRefHook from "./component/UseRefHook";
+import First from "./SubComponent/First";
+import UseReducerHook from "./component/UseReducerHook";
+
+export const Pass = createContext();
 
 export default function App() {
+  const name = "Ram";
   return (
     <div>
+      <UseReducerHook />
+      <div className="context">
+        App component
+        <Pass.Provider value={name}>
+          <First />
+        </Pass.Provider>
+      </div>
+
       <UseRefHook />
       <UseEffectTimerstartstop />
       <APIUseEffect />
