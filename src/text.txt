@@ -109,3 +109,20 @@
     dispatch-- a function to tell the reducer what to do
     reducerFunction-- the logic that returns a new state
     initialValue-- starting value
+
+## useCallback()
+
+    Every time a component re-renders,
+    it creates a brand new copy of every functions inside it.
+
+    Even if the function's code look like exactly tha same
+    React sees it as differnt because it's a new object in memory.
+
+
+    useage of useCallback
+
+        reduce unnecessary child re-rendering
+
+    const variableName=useCallback(()=>{
+        //code
+    },[dependency])

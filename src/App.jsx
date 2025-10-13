@@ -9,6 +9,7 @@ import UseEffectTimerstartstop from "./component/UseEffectTimerstartstop";
 import UseRefHook from "./component/UseRefHook";
 import First from "./SubComponent/First";
 import UseReducerHook from "./component/UseReducerHook";
+import UseCllbackhook from "./component/UseCllbackhook";
 
 export const Pass = createContext();
 
@@ -16,6 +17,7 @@ export default function App() {
   const name = "Ram";
   return (
     <div>
+      <UseCllbackhook />
       <UseReducerHook />
       <div className="context">
         App component
