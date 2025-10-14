@@ -126,3 +126,39 @@
     const variableName=useCallback(()=>{
         //code
     },[dependency])
+
+## Routing in react & nested Routing dom
+
+    Routing means navigation b/w differnt pages in a web Applications
+    without refreshing the browser.
+
+    in Traditional websites ,clicking a link reloads the wole page.
+
+    In react (SAP) ,Routing lets us changes the view without reloading.
+
+        better performance.
+        Smooth user experiance.
+        Contol over navigation without server request.
+
+
+        <browserRouter>
+            <Routes>
+                <Route/>
+                <Route/>
+                <Route/>
+            </Routes>
+        </browserRouter>
+
+    npm install react-router-dom
+
+
+
+
+
+
+
+
+
+
+
+
