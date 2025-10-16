@@ -51,3 +51,35 @@
   align-items: center;
   background: burlywood;
 }
+.chat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.chatApp {
+  width: 40%;
+  border: 3px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: aquamarine;
+}
+.chatApp > textarea,
+.chatApp > input {
+  width: 100%;
+  border: 2px solid gray;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.chatApp > button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: blue;
+  color: aliceblue;
+}

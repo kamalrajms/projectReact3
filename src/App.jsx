@@ -17,6 +17,7 @@ import Contact from "./RouterDOm/Contact";
 import Service from "./RouterDOm/Service";
 import WebApp from "./SubComponent/WebApp";
 import AppDevelop from "./SubComponent/AppDevelop";
+import BlogDetails from "./RouterDOm/BlogDetails";
 
 export const Pass = createContext();
 
@@ -64,6 +65,7 @@ export default function App() {
             <Route path="" element={<WebApp />} />
             <Route path="appdevelopment" element={<AppDevelop />} />
           </Route>
+          <Route path="/blogs/:id" element={<BlogDetails />} />
         </Routes>
       </BrowserRouter>
     </div>
