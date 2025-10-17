@@ -165,7 +165,18 @@
 
 
 
+## structure
 
+    page-
+        home
+        about
+        contact
+    component-
+        sub part of home
+        sub part of about
+    ui-part-
+        button
+        input
 
 
 

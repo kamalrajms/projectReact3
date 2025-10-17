@@ -83,3 +83,11 @@
   background-color: blue;
   color: aliceblue;
 }
+
+.square > nav {
+  display: flex;
+  /* padding: 12px; */
+}
+.xbuttom {
+  padding: 12px;
+}
