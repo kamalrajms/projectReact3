@@ -1,42 +1,45 @@
-import React, { useState } from "react";
-import Square from "./Square";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-export default function WebApp() {
-  const [Xnext, setXnext] = useState(true);
-  const [square, setSquare] = useState(Array(9).fill(null));
+const App = () => {
+  const [weather, setWeather] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
-  function handleClick(i) {
-    if (square[i]) {
-      return;
-    }
-    const nextSquare = square.slice();
-    if (Xnext) {
-      nextSquare[i] = "x";
-    } else {
-      nextSquare[i] = "o";
-    }
-    setSquare(nextSquare);
-    setXnext(!Xnext);
-    console.log(Xnext);
-  }
+  useEffect(() => {
+    const fetchWeather = async () => {
+      try {
+        const response = await axios.get(
+          "https://api.openweathermap.org/data/2.5/weather",
+          {
+            params: {
+              q: "Chennai",
+              appid: "YOUR_API_KEY",
+              units: "metric",
+            },
+          }
+        );
+        setWeather(response.data);
+      } catch (err) {
+        setError("Failed to fetch data");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchWeather();
+  }, []);
+
+  if (loading) return <p>Loading weather data...</p>;
+  if (error) return <p>{error}</p>;
 
   return (
-    <div className="square">
-      <nav>
-        <Square value={square[0]} handleClick={() => handleClick(0)} />
-        <Square value={square[1]} handleClick={() => handleClick(1)} />
-        <Square value={square[2]} handleClick={() => handleClick(2)} />
-      </nav>
-      <nav>
-        <Square value={square[3]} handleClick={() => handleClick(3)} />
-        <Square value={square[4]} handleClick={() => handleClick(4)} />
-        <Square value={square[5]} handleClick={() => handleClick(5)} />
-      </nav>
-      <nav>
-        <Square value={square[6]} handleClick={() => handleClick(6)} />
-        <Square value={square[7]} handleClick={() => handleClick(7)} />
-        <Square value={square[8]} handleClick={() => handleClick(8)} />
-      </nav>
+    <div style={{ textAlign: "center" }}>
+      <h2>Weather in {weather.name}</h2>
+      <p>Temperature: {weather.main.temp} °C</p>
+      <p>Condition: {weather.weather[0].description}</p>
     </div>
   );
-}
+};
+
+export default App;
